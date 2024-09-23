@@ -49,6 +49,30 @@ const char* github_certificate =
 "";
 #endif
 
+const char *github_certificate PROGMEM = R"CERT(
+-----BEGIN CERTIFICATE-----
+MIIDqDCCAy6gAwIBAgIRAPNkTmtuAFAjfglGvXvh9R0wCgYIKoZIzj0EAwMwgYgx
+CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5MRQwEgYDVQQHEwtKZXJz
+ZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMS4wLAYDVQQD
+EyVVU0VSVHJ1c3QgRUNDIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTE4MTEw
+MjAwMDAwMFoXDTMwMTIzMTIzNTk1OVowgY8xCzAJBgNVBAYTAkdCMRswGQYDVQQI
+ExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoT
+D1NlY3RpZ28gTGltaXRlZDE3MDUGA1UEAxMuU2VjdGlnbyBFQ0MgRG9tYWluIFZh
+bGlkYXRpb24gU2VjdXJlIFNlcnZlciBDQTBZMBMGByqGSM49AgEGCCqGSM49AwEH
+A0IABHkYk8qfbZ5sVwAjBTcLXw9YWsTef1Wj6R7W2SUKiKAgSh16TwUwimNJE4xk
+IQeV/To14UrOkPAY9z2vaKb71EijggFuMIIBajAfBgNVHSMEGDAWgBQ64QmG1M8Z
+wpZ2dEl23OA1xmNjmjAdBgNVHQ4EFgQU9oUKOxGG4QR9DqoLLNLuzGR7e64wDgYD
+VR0PAQH/BAQDAgGGMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0lBBYwFAYIKwYB
+BQUHAwEGCCsGAQUFBwMCMBsGA1UdIAQUMBIwBgYEVR0gADAIBgZngQwBAgEwUAYD
+VR0fBEkwRzBFoEOgQYY/aHR0cDovL2NybC51c2VydHJ1c3QuY29tL1VTRVJUcnVz
+dEVDQ0NlcnRpZmljYXRpb25BdXRob3JpdHkuY3JsMHYGCCsGAQUFBwEBBGowaDA/
+BggrBgEFBQcwAoYzaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VTRVJUcnVzdEVD
+Q0FkZFRydXN0Q0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2VydHJ1
+c3QuY29tMAoGCCqGSM49BAMDA2gAMGUCMEvnx3FcsVwJbZpCYF9z6fDWJtS1UVRs
+cS0chWBNKPFNpvDKdrdKRe+oAkr2jU+ubgIxAODheSr2XhcA7oz9HmedGdMhlrd9
+4ToKFbZl+/OnFFzqnvOhcjHvClECEQcKmc8fmA==
+-----END CERTIFICATE-----
+)CERT";
 
 // NOTE: important - this string should correspond to github tag used for Releasing (via. Github Actions)!!
 #define VERSION "0.0.1"
@@ -56,11 +80,11 @@ const char* github_certificate =
 
 // Replace your_username/your_repo with your values (ex. axcap/Esp-GitHub-OTA)
 // This is a link to repo where your firmware updates will be pulled from
-#define RELEASE_URL "https://api.github.com/mortela4/fota_test_esp32/releases/latest"
+// #define RELEASE_URL "https://api.github.com/mortela4/fota_test_esp32/releases/latest"
 
 // Use this version of the URL together with init_ota(VERSION, true) under debugging
 // to spare yourself from getting timeout from GitHub API:
-// #define RELEASE_URL "https://github.com/mortela4/fota_test_esp32/releases/latest"
+#define RELEASE_URL "https://github.com/mortela4/fota_test_esp32/releases/latest"
 
 #define DELAY_MS 1000
 
