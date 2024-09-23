@@ -1,0 +1,13 @@
+{
+	"wifi": 
+	{
+		"SSID": "7Development",
+        "passkey": "dev73lopment"
+ 	},
+    "audio":
+    {
+        "current_file": "small_sample.mp3",
+        "file_pos": 0,
+        "volume": 10
+    }
+}
