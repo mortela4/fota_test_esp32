@@ -75,7 +75,7 @@ cS0chWBNKPFNpvDKdrdKRe+oAkr2jU+ubgIxAODheSr2XhcA7oz9HmedGdMhlrd9
 )CERT";
 
 // NOTE: important - this string should correspond to github tag used for Releasing (via. Github Actions)!!
-#define VERSION "0.0.1"
+#define VERSION "0.0.2"
 
 
 // Replace your_username/your_repo with your values (ex. axcap/Esp-GitHub-OTA)
